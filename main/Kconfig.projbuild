@@ -1,0 +1,33 @@
+menu "Analog desk clock (non-C 1.75)"
+config CLOCK_SELF_TEST
+    bool "Run 25-face rendering benchmark on boot (diagnostic only)"
+    default n
+config CLOCK_DAY
+    int "Day brightness percent"
+    range 1 100
+    default 85
+config CLOCK_EVENING
+    int "Evening brightness percent"
+    range 1 100
+    default 65
+config CLOCK_NIGHT
+    int "Night brightness percent"
+    range 1 100
+    default 30
+config CLOCK_DAY_START
+    int "Day starts (JST hour)"
+    range 0 21
+    default 7
+config CLOCK_EVENING_START
+    int "Evening starts (after day start)"
+    range 1 22
+    default 19
+config CLOCK_NIGHT_START
+    int "Night starts (after evening start)"
+    range 2 23
+    default 23
+config CLOCK_NTP_HOURS
+    int "Successful NTP synchronization interval (hours)"
+    range 1 24
+    default 6
+endmenu

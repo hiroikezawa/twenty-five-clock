@@ -1,0 +1,48 @@
+name: Build clock and prepare release
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build non-C 16MB firmware
+        uses: espressif/esp-idf-ci-action@v1
+        with:
+          esp_idf_version: v5.5.5
+          target: esp32s3
+          command: idf.py build
+      - name: Package and test installer
+        run: |
+          python3 tools/package_release.py
+          python3 tests/test_release.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: clock-25faces-non-c-16mb
+          path: |
+            release/clock-25faces-non-c-16mb.zip
+            release/SHA256SUMS.txt
+          if-no-files-found: error
+  release:
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: clock-25faces-non-c-16mb
+          path: release
+      - name: Create draft release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CLOCK_TAG: ${{ github.ref_name }}
+        run: gh release create "$CLOCK_TAG" release/clock-25faces-non-c-16mb.zip release/SHA256SUMS.txt --verify-tag --draft --title "TWENTY-FIVE $CLOCK_TAG" --notes-file docs/RELEASE_NOTES.md

@@ -1,0 +1,189 @@
+{
+  "tested_application_sha256": "c9ae22c13ca12bf193066040383227b72d01b95641ade6053231f161cee7ca18",
+  "rotation_degrees": 37,
+  "spi_mhz": 40,
+  "frames_per_face": 120,
+  "excluded": [
+    "background generation",
+    "orientation changes",
+    "Wi-Fi communication",
+    "touch processing"
+  ],
+  "faces": [
+    {
+      "number": 1,
+      "name": "BAUHAUS",
+      "average_us": 6223,
+      "maximum_us": 7374,
+      "over_16667_us": 0
+    },
+    {
+      "number": 2,
+      "name": "SWISS RAILWAY",
+      "average_us": 10685,
+      "maximum_us": 12299,
+      "over_16667_us": 0
+    },
+    {
+      "number": 3,
+      "name": "PILOT",
+      "average_us": 8980,
+      "maximum_us": 10197,
+      "over_16667_us": 0
+    },
+    {
+      "number": 4,
+      "name": "DIVER",
+      "average_us": 9528,
+      "maximum_us": 10859,
+      "over_16667_us": 0
+    },
+    {
+      "number": 5,
+      "name": "1970S RETRO",
+      "average_us": 11070,
+      "maximum_us": 12377,
+      "over_16667_us": 0
+    },
+    {
+      "number": 6,
+      "name": "CLASSIC",
+      "average_us": 7245,
+      "maximum_us": 8460,
+      "over_16667_us": 0
+    },
+    {
+      "number": 7,
+      "name": "CHRONOGRAPH",
+      "average_us": 11260,
+      "maximum_us": 13038,
+      "over_16667_us": 0
+    },
+    {
+      "number": 8,
+      "name": "SECTOR",
+      "average_us": 7153,
+      "maximum_us": 8240,
+      "over_16667_us": 0
+    },
+    {
+      "number": 9,
+      "name": "ASTRONOMICAL",
+      "average_us": 5276,
+      "maximum_us": 6233,
+      "over_16667_us": 0
+    },
+    {
+      "number": 10,
+      "name": "INDUSTRIAL",
+      "average_us": 9591,
+      "maximum_us": 10753,
+      "over_16667_us": 0
+    },
+    {
+      "number": 11,
+      "name": "MINIMAL DOT",
+      "average_us": 3640,
+      "maximum_us": 4258,
+      "over_16667_us": 0
+    },
+    {
+      "number": 12,
+      "name": "RADAR",
+      "average_us": 10769,
+      "maximum_us": 12638,
+      "over_16667_us": 0
+    },
+    {
+      "number": 13,
+      "name": "GENERATIVE",
+      "average_us": 4634,
+      "maximum_us": 5275,
+      "over_16667_us": 0
+    },
+    {
+      "number": 14,
+      "name": "ART DECO",
+      "average_us": 7504,
+      "maximum_us": 8593,
+      "over_16667_us": 0
+    },
+    {
+      "number": 15,
+      "name": "MONDRIAN",
+      "average_us": 10186,
+      "maximum_us": 11564,
+      "over_16667_us": 0
+    },
+    {
+      "number": 16,
+      "name": "ORBITAL",
+      "average_us": 6880,
+      "maximum_us": 7588,
+      "over_16667_us": 0
+    },
+    {
+      "number": 17,
+      "name": "MARINER",
+      "average_us": 8086,
+      "maximum_us": 9621,
+      "over_16667_us": 0
+    },
+    {
+      "number": 18,
+      "name": "PAPER FAN",
+      "average_us": 7369,
+      "maximum_us": 8390,
+      "over_16667_us": 0
+    },
+    {
+      "number": 19,
+      "name": "BLUEPRINT",
+      "average_us": 8233,
+      "maximum_us": 9394,
+      "over_16667_us": 0
+    },
+    {
+      "number": 20,
+      "name": "BOTANICAL",
+      "average_us": 6942,
+      "maximum_us": 8194,
+      "over_16667_us": 0
+    },
+    {
+      "number": 21,
+      "name": "CONCENTRIC",
+      "average_us": 9438,
+      "maximum_us": 9995,
+      "over_16667_us": 0
+    },
+    {
+      "number": 22,
+      "name": "STATION",
+      "average_us": 8328,
+      "maximum_us": 9428,
+      "over_16667_us": 0
+    },
+    {
+      "number": 23,
+      "name": "RIBBON",
+      "average_us": 9648,
+      "maximum_us": 10808,
+      "over_16667_us": 0
+    },
+    {
+      "number": 24,
+      "name": "SKELETON",
+      "average_us": 9880,
+      "maximum_us": 11246,
+      "over_16667_us": 0
+    },
+    {
+      "number": 25,
+      "name": "TYPOGRAPHY",
+      "average_us": 5372,
+      "maximum_us": 6139,
+      "over_16667_us": 0
+    }
+  ]
+}

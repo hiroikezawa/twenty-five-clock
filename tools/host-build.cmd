@@ -1,0 +1,5 @@
+@echo off
+call "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat" >nul
+if errorlevel 1 exit /b 1
+if not exist build-host mkdir build-host
+cl /nologo /LD /O2 /std:c11 /I main\faces /I main\display /I main\clock /I main\touch /Fo:build-host\ /Fe:build-host\clock_test.dll tests\host_bridge.c main\touch\gesture.c main\display\draw.c main\display\font_data.c main\clock\schedule.c main\faces\face_common.c main\faces\face_bauhaus.c main\faces\face_swiss.c main\faces\face_pilot.c main\faces\face_diver.c main\faces\face_retro.c main\faces\face_classic.c main\faces\face_chronograph.c main\faces\face_sector.c main\faces\face_astronomical.c main\faces\face_industrial.c main\faces\face_minimal.c main\faces\face_radar.c main\faces\face_generative.c main\faces\face_deco.c main\faces\face_mondrian.c main\faces\face_orbit.c main\faces\face_compass.c main\faces\face_fan.c main\faces\face_blueprint.c main\faces\face_petals.c main\faces\face_concentric.c main\faces\face_station.c main\faces\face_ribbon.c main\faces\face_skeleton.c main\faces\face_typography.c /link /IMPLIB:build-host\clock_test.lib
