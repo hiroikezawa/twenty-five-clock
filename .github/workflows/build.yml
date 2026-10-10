@@ -45,4 +45,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           CLOCK_TAG: ${{ github.ref_name }}
-        run: gh release create "$CLOCK_TAG" release/clock-25faces-non-c-16mb.zip release/SHA256SUMS.txt --verify-tag --draft --title "TWENTY-FIVE $CLOCK_TAG" --notes-file docs/RELEASE_NOTES.md
+        run: |
+          if gh release view "$CLOCK_TAG" >/dev/null 2>&1; then
+            echo "Release already exists; preserving its assets."
+          else
+            gh release create "$CLOCK_TAG" release/clock-25faces-non-c-16mb.zip release/SHA256SUMS.txt --verify-tag --draft --title "TWENTY-FIVE $CLOCK_TAG" --notes-file docs/RELEASE_NOTES.md
+          fi
